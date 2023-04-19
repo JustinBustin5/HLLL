@@ -1,12 +1,22 @@
 # HLLL
 An assembly-like scripting language.
 
+To get started, download the latest release of HLLL and create a file called HelloWorld.hlll in the same directory. Copy the Hello World example from the bottom of this README and paste it into HelloWorld.hlll. Then run ```hlll -r HelloWorld.hlll``` (Windows) or ```dotnet hlll.dll -r HelloWorld.hlll```. (Cross-Platform)
+
+Note: HLLL comes with a UDL (User Defined Language) for Notepad++. This gives you syntax highlighting for HLLL. Copy "hlll-version.udl.xml" to "C:\Users\justi\AppData\Roaming\Notepad++\userDefineLangs\"
+
+# Command Line Interface
+Note: This application can run on any OS, but the commands listed here are written for Windows. To run it on platforms other than Windows, substitute ```hlll``` for ```dotnet hlll.dll```.
+
+```hlll``` | Shows list of valid arguments
+```hlll -r <path>``` | Runs a script.
+
 # Language Grammar
 Each line of code contains an **instruction**. There are 2 parts to an instruction: the *opcode*, and the *arguments*. The opcode is the main part of the instruction, determining what the instruction actually does. For example, ```add``` adds the two uppermost numbers on the stack and pushes the result, ```rdl``` reads a line of user input and pushes it to the stack, and ```nop``` does nothing, just to name a few.
 
 The arguments are the part of the instruction sometimes needed by the opcode. This is used for instructions like ```hlt``` where putting the exit code on the stack is quite inefficient, or instructions like ```psh``` where putting the value on the stack is literally not an option. When argumemts are specified on an instruction, it is also sometimes called an immediate.
 
-Please note that strings in HLLL are not like other languages. They do NOT have quotes surrounding them, and adding a space is done by using "\s" instead of a space.
+***Please note that strings in HLLL are not like other languages. They do NOT have quotes surrounding them, and adding a space is done by using "\s" instead of a space.***
 
 # List of instructions
 The following is a list of valid HLLL instructions as of version 1.0:
