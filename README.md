@@ -9,6 +9,7 @@ Note: HLLL comes with a UDL (User Defined Language) for Notepad++. This gives yo
 Note: This application can run on any OS, but the commands listed here are written for Windows. To run it on platforms other than Windows, substitute ```hlll``` for ```dotnet hlll.dll```.
 
 ```hlll``` | Shows list of valid arguments
+
 ```hlll -r <path>``` | Runs a script.
 
 # Language Grammar
