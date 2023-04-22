@@ -1,16 +1,16 @@
 # HLLL
 An assembly-like scripting language.
 
-To get started, download the latest release of HLLL and create a file called HelloWorld.hlll in the same directory. Copy the Hello World example from the bottom of this README and paste it into HelloWorld.hlll. Then run ```hlll -r HelloWorld.hlll``` (Windows) or ```dotnet hlll.dll -r HelloWorld.hlll```. (Cross-Platform)
+To get started, download the latest release of HLLL and run ```hlll HelloWorld.hlll``` (Windows) or ```dotnet hlll.dll HelloWorld.hlll```. (Cross-Platform)
 
 Note: HLLL comes with a UDL (User Defined Language) for Notepad++. This gives you syntax highlighting for HLLL. Copy "hlll-version.udl.xml" to "C:\Users\justi\AppData\Roaming\Notepad++\userDefineLangs\"
 
 # Command Line Interface
 Note: This application can run on any OS, but the commands listed here are written for Windows. To run it on platforms other than Windows, substitute ```hlll``` for ```dotnet hlll.dll```.
 
-```hlll``` | Shows list of valid arguments
+To run a script, just type ```hlll scriptname[.extension]```. Note: If you don't specify an extension, the program will assume you mean .hlll.
 
-```hlll -r <path>``` | Runs a script.
+Windows: You can also run a script by dragging the file into HLLL.exe or using the Open With dialog to open the file with HLLL.exe
 
 # Language Grammar
 Each line of code contains an **instruction**. There are 2 parts to an instruction: the *opcode*, and the *arguments*. The opcode is the main part of the instruction, determining what the instruction actually does. For example, ```add``` adds the two uppermost numbers on the stack and pushes the result, ```rdl``` reads a line of user input and pushes it to the stack, and ```nop``` does nothing, just to name a few.
@@ -20,7 +20,7 @@ The arguments are the part of the instruction sometimes needed by the opcode. Th
 ***Please note that strings in HLLL are not like other languages. They do NOT have quotes surrounding them, and adding a space is done by using "\s" instead of a space.***
 
 # List of instructions
-The following is a list of valid HLLL instructions as of version 1.0:
+The following is a list of valid HLLL instructions as of version 1.1:
 
 ```sof``` | Immediates: None; Stack inputs: None | Marks the beginning of code execution, also called the entry point. (SOF stands for start of file, but it can be put wherever you need execution to begin.) Put this later in the script if you want to make "functions" using ```flg``` without running them all at the start. ***You must have an ```sof``` in your script.***
 
