@@ -24,7 +24,7 @@ The following is a list of valid HLLL instructions as of version 1.1:
 
 ```sof``` | Immediates: None; Stack inputs: None | Marks the beginning of code execution, also called the entry point. (SOF stands for start of file, but it can be put wherever you need execution to begin.) Put this later in the script if you want to make "functions" using ```flg``` without running them all at the start. ***You must have an ```sof``` in your script.***
 
-```hlt``` | Immediates: Exit code; Stack inputs: None | Exits the program with the specified error code.
+```hlt``` | Immediates: Exit code; Stack inputs: None | Exits the program with the specified exit code.
 
 ```wrt``` | Immediates: None; Stack inputs: Object to write | Pops the uppermost object from the stack and writes it to the console. *Does not add a newline.*
 
