@@ -40,10 +40,10 @@ namespace HLLL
 
         public void Execute()
         {
-            bool executing = true;
             executingIndex = sofIndex + 1;
-            while (executing && !halt)
+            while (!halt)
             {
+                if (executingIndex >= instructions.Count) { ErrorOut("Reached end of file without hlt"); break; }
                 ExecuteInstruction(instructions[executingIndex]);
             }
         }
